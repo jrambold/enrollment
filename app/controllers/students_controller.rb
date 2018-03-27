@@ -16,4 +16,10 @@ class StudentsController < ApplicationController
       render :edit
     end
   end
+
+  private
+
+  def student_params
+    params.require(:student).permit(:name)
+  end
 end
