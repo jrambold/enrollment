@@ -1,11 +1,14 @@
 <%= @student.name %>
 <br>
+<%= link_to "Create new Address", "/students/#{@student.id}/addresses/new" %>
+<br>
+Addresses:
 <% @addresses.each do |address| %>
 <p>
 <%= address.description %>,
 <%= address.street %>,
 <%= address.city %>,
-<%= address.state %> 
+<%= address.state %>
 <%= address.zip %>
 </p>
 <% end %>
