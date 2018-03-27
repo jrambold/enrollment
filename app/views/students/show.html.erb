@@ -1,1 +1,11 @@
 <%= @student.name %>
+<br>
+<% @addresses.each do |address| %>
+<p>
+<%= address.description %>,
+<%= address.street %>,
+<%= address.city %>,
+<%= address.state %> 
+<%= address.zip %>
+</p>
+<% end %>
