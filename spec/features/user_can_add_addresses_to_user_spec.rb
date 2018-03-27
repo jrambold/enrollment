@@ -5,11 +5,11 @@ describe "User can add addresses to a student" do
     student = Student.create!(name:"Jake")
     visit "/students/#{student.id}/addresses/new"
 
-    fill_in "student[description]", with: "rambo"
-    fill_in "student[street]", with: "Starry"
-    fill_in "student[city]", with: "Castle"
-    fill_in "student[state]", with: "CO"
-    fill_in "student[zip]", with: "80109"
+    fill_in "address[description]", with: "rambo"
+    fill_in "address[street]", with: "Starry"
+    fill_in "address[city]", with: "Castle"
+    fill_in "address[state]", with: "CO"
+    fill_in "address[zip]", with: "80109"
     click_button "Create"
 
     expect(current_path).to eq("/students/#{student.id}")
